@@ -1,16 +1,16 @@
 
 function completeTask(buttonId, taskId) {
-    const recent = numberFromString("recent-task");
+        const recent = numberFromString("recent-task");
     const total_task = numberFromString("tasks");
 
-    const presentTask = recent - 1;
+      const presentTask = recent - 1;
     const updatedTotalTask = total_task - 1; 
 
     document.getElementById("tasks").innerText = updatedTotalTask;
     document.getElementById("recent-task").innerText = presentTask;
 
 
-    const button = document.getElementById(buttonId);
+        const button = document.getElementById(buttonId);
     button.disabled = true;
     button.style.backgroundColor = "gray";
     button.style.cursor = "default";
@@ -38,28 +38,48 @@ function completeTask(buttonId, taskId) {
 }
 
 
+
 document.getElementById("complete-btn-1").addEventListener("click", function () {
     completeTask("complete-btn-1", "task-1");
 });
+
+
 document.getElementById("complete-btn-2").addEventListener("click", function () {
+    
     completeTask("complete-btn-2", "task-2");
 });
+
+
 document.getElementById("complete-btn-3").addEventListener("click", function () {
-    completeTask("complete-btn-3", "task-3");
+   
+         completeTask("complete-btn-3", "task-3");
 });
+
+
 document.getElementById("complete-btn-4").addEventListener("click", function () {
     completeTask("complete-btn-4", "task-4");
 });
+
+
 document.getElementById("complete-btn-5").addEventListener("click", function () {
-    completeTask("complete-btn-5", "task-5");
+    
+           completeTask("complete-btn-5", "task-5");
+
 });
+
 document.getElementById("complete-btn-6").addEventListener("click", function () {
-    completeTask("complete-btn-6", "task-6");
+       completeTask("complete-btn-6", "task-6");
+
 });
+
+
 
 
 function numberFromString(id) {
-    const value = document.getElementById(id).innerText;
-    const convertedValue = parseInt(value, 10);
+
+   
+ const value = document.getElementById(id).innerText;
+   
+      const convertedValue = parseInt(value, 10);
     return isNaN(convertedValue) ? 0 : convertedValue;
 }
